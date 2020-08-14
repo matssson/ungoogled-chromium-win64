@@ -1,35 +1,37 @@
-# Binaries for Ungoogled Chromium on 64-bit Windows.
+# Binaries for Ungoogled Chromium on 64-bit Windows
 
-The best thing you could do is build it yourself, following the build process (don't forget the pypiwin32 module for Python 2.7) at:<br>
-https://github.com/ungoogled-software/ungoogled-chromium-windows<br>
-Remember to read the chromium install instructions and and activate "Debugging Tools For Windows":<br>
-https://chromium.googlesource.com/chromium/src/+/refs/tags/81.0.4044.113/docs/windows_build_instructions.md#visual-studio<br>
-Keep in mind that you can update the ungoogled-chromium submodule, should there be any newer releases not yet added to the windows repo.
+## Building Ungoogled Chromium
 
-Build it from cmd when running as an admin. If the build fails then try updating 7-zip, originally my older installation of 7-zip failed. Another thing to keep in mind is that because of relative paths in Windows, you should build everything in the same drive (C:\ for example) as you have Python2 and Python3 installed.
+The best thing you could do is build it yourself, following the build process at:<br>
+https://github.com/ungoogled-software/ungoogled-chromium-windows (don't forget pypiwin32 for Python 2.7)
 
-If you don't want to go through that (the compilation itself can take ~11h), this is what this repo is for.
+Remember to read the chromium install instructions and and activate "Debugging Tools For Windows".<br>
+https://chromium.googlesource.com/chromium/src/+/refs/tags/81.0.4044.113/docs/windows_build_instructions.md#visual-studio
 
-Note also that you cannot access extensions from the Chrome Webstore with UG, you have to get the crx files directly to install extensions. The easiest way to get them would be at https://crxextractor.com/, which links directly to the crx files on Google's servers. UG also has a [wiki page about extensions](https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq#can-i-install-extensions-or-themes-from-the-chrome-webstore) and how to get them.
+Also keep in mind that you can update the ungoogled-chromium submodule if there are any newer releases not yet added to the windows repo.
 
-I have provided the most recent stable versions of [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm "uBlock Origin") avaliable from the Chrome webstore, although newer releases might exist on the uBlock Origin github.
+Build it from cmd when running as an admin. If the build fails then try updating 7-zip, originally my older installation of 7-zip failed. Another thing to keep in mind is that because of relative paths in Windows, you should build everything in the same drive (C:\ for example) as you have Python2 and Python3 installed. The compilation itself can take ~10h.
+
+Note that you cannot access extensions from the Chrome Webstore with UG, you have to get the crx files directly to install extensions. The easiest way to get them would be at https://crxextractor.com/, which links directly to the crx files on Google's servers. UG also has a [wiki page about extensions](https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq#can-i-install-extensions-or-themes-from-the-chrome-webstore) and how to get them.
+
+This repo is for providing prebuilt win64 binaries in the form of executable installers and embeddable zip files. I have also provided the most recent stable versions of [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm "uBlock Origin") that are avaliable on the Chrome webstore, although newer releases might exist on the uBlock Origin github.
 
 ## Latest Releases
 
 #### Ungoogled Chromium 84.0.4147.125-1 [(commit 4f57400)][84.0.4147.125-1]
 [84.0.4147.125-1]: https://github.com/Eloston/ungoogled-chromium/commit/4f574006aca69964995acfa0718e7097ce36c059 "4f574006aca69964995acfa0718e7097ce36c059"
 Installer and zip file both compiled and uploaded 2020-08-14 with LLVM-11.0.0-rc1 and VS19 v16.7.1.<br>
-.exe installer: (link)
+.exe installer: [ungoogled-chromium_84.0.4147.125-1.1_installer.exe](ug-installer/ungoogled-chromium_84.0.4147.125-1.1_installer.exe)
 ```
-MD5:    099a89023df46c7c1d5bdc484e1ee1cd
-SHA1:   099a89023df46c7c1d5bdc484e1ee1cd
-SHA256: 099a89023df46c7c1d5bdc484e1ee1cd
+MD5:    9711D0DA192A65BA986E6F677D4E2AC3
+SHA1:   AC00FCB830713822B102D92CD59AE1E1004B7142
+SHA256: D323D9FC48FC08250361A3C0EA35931404F94BC78FD503597EAC5A282DEA5D97
 ```
-.zip file: (link)
+.zip file: [ungoogled-chromium_84.0.4147.125-1.1_windows.zip](ug-zip/ungoogled-chromium_84.0.4147.125-1.1_windows.zip)
 ```
-MD5:    099a89023df46c7c1d5bdc484e1ee1cd
-SHA1:   099a89023df46c7c1d5bdc484e1ee1cd
-SHA256: 099a89023df46c7c1d5bdc484e1ee1cd
+MD5:    92D060321A7E2016A9D9C11863E89CBF
+SHA1:   7CABB128C7B85E60201BC40E15EB20F522A76AA4
+SHA256: E0F18A396051AF81FC61EF390FA789C171EA6641C3F8CC4696FE9ADA52D9E703
 ```
 
 #### uBlock Origin 1.28.4
